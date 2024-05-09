@@ -44,7 +44,9 @@ module.exports = (_, argv) => ({
       name: "chat_auth",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        "./UserMenu":"./src/components/UserManu/UserMenu"
+      },
       shared: {
         ...deps,
         react: {
