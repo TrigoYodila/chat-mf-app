@@ -44,9 +44,12 @@ module.exports = (_, argv) => ({
       name: "chat",
       filename: "remoteEntry.js",
       remotes: {
-        "chat_auth":"chat_auth@http://localhost:8081/remoteEntry.js"
+        "chat_auth":"chat_auth@http://localhost:8081/remoteEntry.js",
+        "chat_communication":"chat_communication@http://localhost:8082/remoteEntry.js"
       },
-      exposes: {},
+      exposes: {
+        "./functions":"./src/functions/hooks"
+      },
       shared: {
         ...deps,
         react: {

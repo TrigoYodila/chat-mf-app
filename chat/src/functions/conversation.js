@@ -1,23 +1,22 @@
 const conversationDataName = "conversations"
 const questDataName = "questions"
 
-export const getAllConversations = () => {
+export const getAllConverstions = () => {
     const data = localStorage.getItem(conversationDataName)
-    return data && data !== "" ? JSON.parse(data) : []
+    return data && data !== "" ? JSON.parse(data) : [];
 }
 
 export const getConversationById = (id) => {
-    const list = getAllConversations()
-
-    return list.find(item => item.id === id)
+    const list = getAllConverstions()
+    return list.find(item => item.id == id)
 }
 
 export const createConversation = (name = "") => {
-    const list = getAllConversations()
+    const list = getAllConverstions()
 
     const newConversation = {
-        id:list.length + 1,
-        name
+        id: list.length + 1,
+        name,
     }
 
     list.push(newConversation)
@@ -27,12 +26,13 @@ export const createConversation = (name = "") => {
 }
 
 export const appendQuestion = (conversationId, question) => {
-    const list = getAllConversations()
+    const list = getAllConverstions();
     list.push({
-        id:list.length + 1,
+        id: list.length + 1,
         conversationId,
-        question
+        question,
     })
 
-    localStorage.setItem(questDataName,list)
+    localStorage.setItem(questDataName, list)
 }
+

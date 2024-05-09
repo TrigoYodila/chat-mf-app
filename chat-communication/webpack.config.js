@@ -43,8 +43,13 @@ module.exports = (_, argv) => ({
     new ModuleFederationPlugin({
       name: "chat_communication",
       filename: "remoteEntry.js",
-      remotes: {},
-      exposes: {},
+      remotes: {
+        "chat":"chat@http://localhost:8080/remoteEntry.js"
+      },
+      exposes: {
+        "./SmallNewsCard":"./src/components/SmallNewsCard",
+        "./Presentation":"./src/components/Presentation"
+      },
       shared: {
         ...deps,
         react: {
