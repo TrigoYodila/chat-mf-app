@@ -5,12 +5,13 @@ import Presentation from "chat_communication/Presentation"
 
 import "./index.scss";
 import { Layout } from "./Layout";
+import { Inbox } from "./pages/Inbox/Inbox";
 
 const App = () => (
   <Layout>
     <Routes>
       <Route path="" element={<Presentation />}/>
-      {/* <Route path=":conversationId" element={""} /> */}
+      <Route path=":conversationId" element={<Inbox />} />
     </Routes>
   </Layout>
 );

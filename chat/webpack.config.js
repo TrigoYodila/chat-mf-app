@@ -45,7 +45,8 @@ module.exports = (_, argv) => ({
       filename: "remoteEntry.js",
       remotes: {
         "chat_auth":"chat_auth@http://localhost:8081/remoteEntry.js",
-        "chat_communication":"chat_communication@http://localhost:8082/remoteEntry.js"
+        "chat_communication":"chat_communication@http://localhost:8082/remoteEntry.js",
+        "media":"media@http://localhost:8083/remoteEntry.js"
       },
       exposes: {
         "./functions":"./src/functions/hooks"

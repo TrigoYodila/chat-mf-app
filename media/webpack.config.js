@@ -44,7 +44,9 @@ module.exports = (_, argv) => ({
       name: "media",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        "./ChatInputMedia":"./src/components/ChatInputMedia"
+      },
       shared: {
         ...deps,
         react: {
