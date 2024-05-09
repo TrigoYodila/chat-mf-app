@@ -1,6 +1,6 @@
 # Chat-bot app
 
-Mise en place d'une application de chat-bot utilisant les micro-fontends avec la fédération des modules avec similation
+Mise en place d'une application de chat-bot utilisant les micro-fontends avec la fédération des modules par similation
 des plusieurs équipes, chacune travaillant sur les fonctionnalités d'une appli.
 
 ## Installation des dépendances
